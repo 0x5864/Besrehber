@@ -18,7 +18,7 @@ const metaDescription = document.querySelector('meta[name="description"]');
 /**
  * Sirket logosunu sayfaya yerlestirir.
  * SVG dosyalari inline gosterilerek tarayici uyumu artirilir.
- * @param {{logoSrc: string, name: string, imageClass?: string}} company
+ * @param {{logoSrc: string, name: string, imageClass?: string, detailImageClass?: string}} company
  * @returns {Promise<void>}
  */
 async function renderCompanyLogo(company) {
@@ -26,7 +26,8 @@ async function renderCompanyLogo(company) {
     return;
   }
 
-  const imageClass = company.imageClass ? ` ${company.imageClass}` : "";
+  const logoClassName = company.detailImageClass ?? company.imageClass;
+  const imageClass = logoClassName ? ` ${logoClassName}` : "";
 
   if (!company.logoSrc.endsWith(".svg")) {
     logoLink.innerHTML =

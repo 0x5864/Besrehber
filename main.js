@@ -8,6 +8,7 @@ import { companies, getCompanyDetailPath } from "./companies.js";
  * @property {string[]} tags
  * @property {string} logoSrc
  * @property {string=} imageClass
+ * @property {string=} homeImageClass
  */
 
 /** @type {HTMLInputElement|null} */
@@ -28,7 +29,8 @@ let activeFilter = "Tumu";
  */
 function renderCompanyCard(company) {
   const lightLogoClass = company.lightLogo ? " company-card-light-logo" : "";
-  const imageClass = company.imageClass ? ` ${company.imageClass}` : "";
+  const logoClassName = company.homeImageClass ?? company.imageClass;
+  const imageClass = logoClassName ? ` ${logoClassName}` : "";
   const href = getCompanyDetailPath(company.slug);
 
   return `

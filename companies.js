@@ -7,7 +7,8 @@ export const companies = [
     name: "Allianz Hayat ve Emeklilik AŞ",
     url: "https://www.allianz.com.tr",
     tags: ["Emeklilik", "Hayat"],
-    logoSrc: "../assets/logos/allianz.png",
+    logoSrc: "../assets/logos/ballianz.png",
+    detailImageClass: "is-allianz-detail-smaller",
     planSourceUrl:
       "https://www.allianz.com.tr/tr_TR/urunler/bireysel-emeklilik/bireysel-emeklilik-planlari.html",
     sharedPlanNote: "%30 devlet katkısı",
@@ -530,6 +531,8 @@ export const companies = [
     url: "https://www.agesa.com.tr",
     tags: ["Emeklilik", "Hayat"],
     logoSrc: "../assets/logos/agesa.svg",
+    homeImageClass: "is-agesa-home-smaller",
+    detailImageClass: "is-agesa-detail-smaller",
     planSourceUrl: "https://www.agesa.com.tr/bireysel-emeklilik-bes-planlarimiz",
     sharedPlanNote: "%20 devlet katkısı",
     plans: [
@@ -812,6 +815,7 @@ export const companies = [
     url: "https://www.bnpparibascardif.com.tr",
     tags: ["Emeklilik"],
     logoSrc: "../assets/logos/bnpce-transparent.png",
+    homeImageClass: "is-bnp-home-smaller",
     imageClass: "is-scale-150",
     planSourceUrl: "https://www.bnpparibascardif.com.tr/urunler/bireysel-emeklilik",
     sharedPlanNote: "%20 devlet katkısı",
@@ -1736,8 +1740,9 @@ export const companies = [
     name: "Türkiye Hayat ve Emeklilik AŞ",
     url: "https://www.turkiyehayatemeklilik.com.tr",
     tags: ["Emeklilik", "Hayat"],
-    logoSrc: "../assets/logos/the-transparent.png",
-    imageClass: "is-double-plus",
+    logoSrc: "../assets/logos/the.png",
+    homeImageClass: "is-the-home-smaller",
+    detailImageClass: "is-the-detail-larger",
     planSourceUrl:
       "https://www.turkiyehayatemeklilik.com.tr/urunlerimiz/bireysel-emeklilik",
     sharedPlanNote: "%20 devlet katkısı",
@@ -1858,130 +1863,138 @@ export const companies = [
     ],
   },
   {
-    slug: "turkiye-katilim-hayat",
-    name: "Türkiye Katılım Hayat A.Ş.",
-    url: "https://www.turkiyekatilimsigorta.com.tr",
-    tags: ["Hayat", "Sigorta"],
-    logoSrc: "../assets/logos/tks-transparent.png",
-    imageClass: "is-max-plus",
-    extraSections: [
-      {
-        title: "Sağlık Sigortaları",
-        sourceUrl: "https://www.turkiyekatilimsigorta.com.tr",
-        items: [
-          {
-            title: "Sağlığım Güvencede Tamamlayıcı Sağlık Sigortası",
-            description:
-              "SGK destekli yapıda ek sağlık güvencesi arayanlar için tamamlayıcı sağlık çözümüdür.",
-            detailUrl:
-              "https://www.turkiyekatilimsigorta.com.tr/urunler/sagligim-guvencede-tamamlayici-saglik-sigortasi",
-          },
-          {
-            title: "Sağlığım Güvencede Grup Özel Sağlık Sigortası",
-            description:
-              "Çalışanlar ve aileleri için geniş kapsamlı grup sağlık koruması sunar.",
-            detailUrl:
-              "https://www.turkiyekatilimsigorta.com.tr/urunler/sagligim-guvencede-grup-ozel-saglik-sigortasi",
-          },
-        ],
-      },
-      {
-        title: "Hayat Sigortaları",
-        sourceUrl: "https://www.turkiyekatilimsigorta.com.tr",
-        items: [
-          {
-            title: "Finansmana Bağlı Hayat Sigortası",
-            description:
-              "Finansman kullanan müşteriler için yaşam kaybı ve sakatlık risklerine karşı koruma sağlar.",
-            detailUrl:
-              "https://www.turkiyekatilimsigorta.com.tr/urunler/finansmana-bagli-hayat-sigortasi",
-          },
-          {
-            title: "Tehlikeli Hastalıklar Katılım Sigortası",
-            description:
-              "Kritik hastalıklar ve vefat risklerine karşı kapsamlı koruma sunar.",
-            detailUrl:
-              "https://www.turkiyekatilimsigorta.com.tr/urunler/tehlikeli-hastaliklar-katilim-sigortasi",
-          },
-          {
-            title: "Grup Hayat Katılım Sigortası",
-            description:
-              "Kurum çalışanlarını ve ailelerini beklenmedik durumlara karşı maddi güvence altına alır.",
-            detailUrl:
-              "https://www.turkiyekatilimsigorta.com.tr/urunler/grup-hayat-katilim-sigortasi",
-          },
-          {
-            title: "Yarınım Güvende Yıllık Hayat Katılım Sigortası",
-            description:
-              "Yıllık teminat yapısıyla geleceğe karşı ek hayat güvencesi sunar.",
-            detailUrl:
-              "https://www.turkiyekatilimsigorta.com.tr/urunler/yarinim-guvende-yillik-hayat-katilim-sigortasi",
-          },
-        ],
-      },
-      {
-        title: "Ferdi Kaza Sigortaları",
-        sourceUrl: "https://www.turkiyekatilimsigorta.com.tr",
-        items: [
-          {
-            title: "Ferdi Kaza Katılım Sigortası",
-            description:
-              "Beklenmedik kazalara karşı sizi ve sevdiklerinizi koruma altına alır.",
-            detailUrl:
-              "https://www.turkiyekatilimsigorta.com.tr/urunler/ferdi-kaza-katilim",
-          },
-          {
-            title: "Ailem Güvende Katılım",
-            description:
-              "Kaza kaynaklı vefat durumunda sigortalının ailesi için maddi destek sağlar.",
-            detailUrl:
-              "https://www.turkiyekatilimsigorta.com.tr/urunler/ailem-guvende-katilim",
-          },
-          {
-            title: "Limit Koruma Katılım",
-            description:
-              "Kaza sonucu vefat ve maluliyet durumlarında finansal destek sağlayan koruma ürünüdür.",
-            detailUrl:
-              "https://www.turkiyekatilimsigorta.com.tr/urunler/limit-koruma-katilim",
-          },
-          {
-            title: "Finansmana Bağlı Ferdi Kaza Katılım Sigortası",
-            description:
-              "Finansman süresi boyunca kaza sonucu yaşam kaybı ve maluliyet risklerine karşı koruma sağlar.",
-            detailUrl:
-              "https://www.turkiyekatilimsigorta.com.tr/urunler/finansmana-bagli-ferdi-kaza-katilim-sigortasi",
-          },
-        ],
-      },
-      {
-        title: "Diğer Sigortalar",
-        sourceUrl: "https://www.turkiyekatilimsigorta.com.tr",
-        items: [
-          {
-            title: "Bireysel Güvence Katılım Sigortası",
-            description:
-              "Siber olaylar, bireysel kaza ve hukuki koruma başlıklarını bir araya getiren geniş kapsamlı üründür.",
-            detailUrl:
-              "https://www.turkiyekatilimsigorta.com.tr/urunler/bireysel-guvence-katilim-sigortasi",
-          },
-        ],
-      },
-    ],
-  },
-  {
     slug: "qnb-saglik-hayat-sigorta-ve-emeklilik",
     name: "QNB Sağlık Hayat Sigorta ve Emeklilik A.Ş.",
     url: "https://www.qnbsigorta.com.tr",
     tags: ["Emeklilik", "Hayat", "Sigorta"],
     logoSrc: "../assets/logos/qnb-download.svg",
     imageClass: "is-scale-160",
-  },
-  {
-    slug: "quick-hayat-sigorta",
-    name: "Quick Hayat Sigorta A.Ş.",
-    url: "https://www.quickhayat.com.tr",
-    tags: ["Hayat", "Sigorta"],
-    logoSrc: "../assets/logos/quick-hayat.svg",
+    planSourceUrl: "https://www.qnbsigorta.com.tr/bireysel-emeklilik",
+    sharedPlanNote: "%20 devlet katkısı",
+    plans: [
+      {
+        title: "QNB BES Bireysel Emeklilik Planı",
+        description:
+          "Daha düşük katkı payı ile düzenli BES birikimine başlamak isteyenler için uygundur.",
+        middleNote: "En düşük aylık katkı payı: 1.000 TL",
+        applyUrl:
+          "https://www.qnbsigorta.com.tr/bireysel-emeklilik/qnb-bes-bireysel-emeklilik-plani",
+        detailUrl:
+          "https://www.qnbsigorta.com.tr/bireysel-emeklilik/qnb-bes-bireysel-emeklilik-plani",
+      },
+      {
+        title: "Yeni Elit Bireysel Emeklilik Planı",
+        description:
+          "Daha yüksek katkı payı ile yönetim gider kesintisi ödemeden birikim hedefleyenlere yöneliktir.",
+        middleNote: "En düşük aylık katkı payı: 5.000 TL",
+        applyUrl:
+          "https://www.qnbsigorta.com.tr/bireysel-emeklilik/yeni-elit-bireysel-emeklilik-plani",
+        detailUrl:
+          "https://www.qnbsigorta.com.tr/bireysel-emeklilik/yeni-elit-bireysel-emeklilik-plani",
+      },
+    ],
+    extraSections: [
+      {
+        title: "Sağlık Sigortaları",
+        sourceUrl: "https://www.qnbsigorta.com.tr/saglik-sigortasi",
+        items: [
+          {
+            title: "Tam Destek Tamamlayıcı Sağlık Sigortası",
+            description:
+              "Yatarak tedavi ve gündelik hastane tazminatı ile güçlü, esnek ve erişilebilir sağlık güvencesi sunar.",
+            applyUrl:
+              "https://www.qnbsigorta.com.tr/saglik-sigortasi/tam-destek-tamamlayici-saglik-sigortasi",
+            detailUrl:
+              "https://www.qnbsigorta.com.tr/saglik-sigortasi/tam-destek-tamamlayici-saglik-sigortasi",
+          },
+          {
+            title: "Tamamlayıcı Sağlık Sigortası",
+            description:
+              "SGK anlaşmalı kurumlarda yatarak ve ayakta tedavi plan seçenekleriyle ek sağlık koruması sağlar.",
+            applyUrl:
+              "https://www.qnbsigorta.com.tr/saglik-sigortasi/tamamlayici-saglik-sigortasi",
+            detailUrl:
+              "https://www.qnbsigorta.com.tr/saglik-sigortasi/tamamlayici-saglik-sigortasi",
+          },
+          {
+            title: "Kritik Destek Tamamlayıcı Sağlık Sigortası",
+            description:
+              "Kritik hastalıkların tedavi sürecinde oluşturabileceği maddi yüke karşı ek destek sunar.",
+            applyUrl:
+              "https://www.qnbsigorta.com.tr/saglik-sigortasi/kritik-destek-tamamlayici-saglik-sigortasi",
+            detailUrl:
+              "https://www.qnbsigorta.com.tr/saglik-sigortasi/kritik-destek-tamamlayici-saglik-sigortasi",
+          },
+        ],
+      },
+      {
+        title: "Hayat Sigortaları",
+        sourceUrl: "https://www.qnbsigorta.com.tr/hayat-sigortasi",
+        items: [
+          {
+            title: "Akıllı Hayat Sigortası Plus",
+            description:
+              "Süre sonunda ödenen primlerin %10 fazlasını ve dövize endeksli yapı avantajını sunar.",
+            applyUrl:
+              "https://www.qnbsigorta.com.tr/hayat-sigortasi/akilli-hayat-sigortasi-plus",
+            detailUrl:
+              "https://www.qnbsigorta.com.tr/hayat-sigortasi/akilli-hayat-sigortasi-plus",
+          },
+          {
+            title: "Akıllı Hayat Sigortası",
+            description:
+              "Süre sonunda ödenen primleri iade eden ve dövize endeksli koruma sunan hayat sigortasıdır.",
+            applyUrl:
+              "https://www.qnbsigorta.com.tr/hayat-sigortasi/akilli-hayat-sigortasi",
+            detailUrl:
+              "https://www.qnbsigorta.com.tr/hayat-sigortasi/akilli-hayat-sigortasi",
+          },
+          {
+            title: "Bütçeme Destek Hayat Sigortası",
+            description:
+              "1.250.000 TL'ye kadar teminatla sevdiklerinize maddi güvence ve bütçe desteği sunar.",
+            applyUrl:
+              "https://www.qnbsigorta.com.tr/hayat-sigortasi/butceme-destek-hayat-sigortasi",
+            detailUrl:
+              "https://www.qnbsigorta.com.tr/hayat-sigortasi/butceme-destek-hayat-sigortasi",
+          },
+        ],
+      },
+      {
+        title: "Ferdi Kaza Sigortaları",
+        sourceUrl: "https://www.qnbsigorta.com.tr/ferdi-kaza-sigortasi",
+        items: [
+          {
+            title: "Gülen Yüzler Ferdi Kaza Sigortası",
+            description:
+              "Kaza risklerine karşı koruma sunarken ücretsiz diş sağlığı hizmetleri de sağlar.",
+            middleNote: "Aylık prim tutarı: 300 TL",
+            applyUrl:
+              "https://www.qnbsigorta.com.tr/ferdi-kaza-sigortasi/gulen-yuzler-ferdi-kaza-sigortasi",
+            detailUrl:
+              "https://www.qnbsigorta.com.tr/ferdi-kaza-sigortasi/gulen-yuzler-ferdi-kaza-sigortasi",
+          },
+          {
+            title: "Bütçeme Destek Ferdi Kaza Sigortası",
+            description:
+              "2.000.000 TL'ye kadar maddi güvence ile günlük yaşam kazalarına karşı koruma sunar.",
+            applyUrl:
+              "https://www.qnbsigorta.com.tr/ferdi-kaza-sigortasi/butceme-destek-ferdi-kaza-sigortasi",
+            detailUrl:
+              "https://www.qnbsigorta.com.tr/ferdi-kaza-sigortasi/butceme-destek-ferdi-kaza-sigortasi",
+          },
+          {
+            title: "E-İyilik Sağlık Ferdi Kaza Sigortası",
+            description:
+              "Kaza güvencesini online sağlık hizmetleri ile bir araya getiren tek paket çözümdür.",
+            applyUrl:
+              "https://www.qnbsigorta.com.tr/ferdi-kaza-sigortasi/e-iyilik-saglik-ferdi-kaza-sigortasi",
+            detailUrl:
+              "https://www.qnbsigorta.com.tr/ferdi-kaza-sigortasi/e-iyilik-saglik-ferdi-kaza-sigortasi",
+          },
+        ],
+      },
+    ],
   },
   {
     slug: "viennalife-emeklilik-ve-hayat",
@@ -1989,6 +2002,133 @@ export const companies = [
     url: "https://www.viennalife.com.tr/",
     tags: ["Emeklilik", "Hayat"],
     logoSrc: "../assets/logos/viennalife.svg",
+    detailImageClass: "is-viennalife-detail-smaller",
+    planSourceUrl: "https://www.viennalife.com.tr/urunler/bes",
+    plans: [
+      {
+        title: "İkinci Bahar Sigortası",
+        description:
+          "Emeklilik döneminde ek gelir ve finansal güvenceyi sürdürmek isteyenler için hazırlanmıştır.",
+        applyUrl: "https://www.viennalife.com.tr/urunler/bes",
+        detailUrl: "https://www.viennalife.com.tr/urunler/bes",
+      },
+    ],
+    extraSections: [
+      {
+        title: "Prim İadeli Ürünler",
+        sourceUrl: "https://viennalife.com.tr/urunler/prim-iadeli-urunler",
+        items: [
+          {
+            title: "ROP 80+20 Hayat Sigortası",
+            description:
+              "Risk gerçekleşmezse primlerin büyük kısmını iade eden ve yüksek teminat sunan hayat ürünüdür.",
+            applyUrl: "https://viennalife.com.tr/urunler/prim-iadeli-urunler",
+            detailUrl: "https://viennalife.com.tr/urunler/prim-iadeli-urunler",
+          },
+          {
+            title: "ROP 80+20 Karma Hayat Sigortası",
+            description:
+              "TL prim ve döviz teminat yapısını prim iadesi avantajı ile birleştirir.",
+            applyUrl: "https://viennalife.com.tr/urunler/prim-iadeli-urunler",
+            detailUrl: "https://viennalife.com.tr/urunler/prim-iadeli-urunler",
+          },
+          {
+            title: "ROP 60+20 Beş Yıllık Karma Hayat Sigortası",
+            description:
+              "Beş yıllık sürede prim iadesi ve yaşam kaybı teminatını birlikte sunan çözümdür.",
+            applyUrl: "https://viennalife.com.tr/urunler/prim-iadeli-urunler",
+            detailUrl: "https://viennalife.com.tr/urunler/prim-iadeli-urunler",
+          },
+          {
+            title: "Reci-Pİ Hayat Sigortası",
+            description:
+              "Türk Eczacıları Birliği üyeleri için hazırlanmış özel prim iadeli hayat ürünüdür.",
+            applyUrl: "https://viennalife.com.tr/urunler/prim-iadeli-urunler",
+            detailUrl: "https://viennalife.com.tr/urunler/prim-iadeli-urunler",
+          },
+        ],
+      },
+      {
+        title: "Birikim Ürünleri",
+        sourceUrl: "https://www.viennalife.com.tr/urunler/birikim-urunleri",
+        items: [
+          {
+            title: "Dövize Endeksli Ödüllü Birikim Hayat Sigortası",
+            description:
+              "Tasarrufları yüksek getiri araçlarında değerlendirirken sevdiklerinize koruma da sunar.",
+            applyUrl: "https://www.viennalife.com.tr/urunler/birikim-urunleri",
+            detailUrl: "https://www.viennalife.com.tr/urunler/birikim-urunleri",
+          },
+          {
+            title: "Ödüllü Eğitim Hayat Sigortası",
+            description:
+              "Çocukların geleceği için birikim yaparken kâr paylı ödül yapısı sağlar.",
+            applyUrl: "https://www.viennalife.com.tr/urunler/birikim-urunleri",
+            detailUrl: "https://www.viennalife.com.tr/urunler/birikim-urunleri",
+          },
+          {
+            title: "Karma Dövize Endeksli Ödüllü Birikim Hayat Sigortası",
+            description:
+              "Primlerin büyük kısmını değerlendirerek birikim ve hayat korumasını aynı üründe toplar.",
+            applyUrl: "https://www.viennalife.com.tr/urunler/birikim-urunleri",
+            detailUrl: "https://www.viennalife.com.tr/urunler/birikim-urunleri",
+          },
+        ],
+      },
+      {
+        title: "Koruma Ürünleri",
+        sourceUrl: "https://www.viennalife.com.tr/urunler/koruma-urunleri",
+        items: [
+          {
+            title: "Turuncu Elma Hayat Sigortası",
+            description:
+              "Tercihlere göre şekillenen tam koruma yapısıyla size ve sevdiklerinize güvence sunar.",
+            applyUrl: "https://www.viennalife.com.tr/urunler/koruma-urunleri",
+            detailUrl: "https://www.viennalife.com.tr/urunler/koruma-urunleri",
+          },
+        ],
+      },
+      {
+        title: "Tek Primliler",
+        sourceUrl: "https://www.viennalife.com.tr/urunler/tek-primliler",
+        items: [
+          {
+            title: "Tek Prim Ödemeli Ödüllü Hayat Sigortası",
+            description:
+              "Tek seferlik prim ödemesi ile sevdiklerinize koruma ve kazanç fırsatı sunar.",
+            applyUrl: "https://www.viennalife.com.tr/urunler/tek-primliler",
+            detailUrl: "https://www.viennalife.com.tr/urunler/tek-primliler",
+          },
+          {
+            title: "5 Yıllık Tek Prim Ödemeli Ödüllü Hayat Sigortası",
+            description:
+              "Beş yıllık vadede tek primli yapı ile güvence ve ödül avantajını bir araya getirir.",
+            applyUrl: "https://www.viennalife.com.tr/urunler/tek-primliler",
+            detailUrl: "https://www.viennalife.com.tr/urunler/tek-primliler",
+          },
+          {
+            title: "Kuponlu Tek Prim Ödemeli Hayat Sigortası",
+            description:
+              "Tek primli hayat korumasını dönemsel kupon geliri yaklaşımıyla destekler.",
+            applyUrl: "https://www.viennalife.com.tr/urunler/tek-primliler",
+            detailUrl: "https://www.viennalife.com.tr/urunler/tek-primliler",
+          },
+        ],
+      },
+      {
+        title: "Kredi Bağlantılı Ürünler",
+        sourceUrl: "https://viennalife.com.tr/urunler/kredi-baglantili-urunler",
+        items: [
+          {
+            title: "Kredi Hayat Sigortası",
+            description:
+              "Kredi maliyetini azaltmaya yardımcı olan ve kredi sürecine uygun hayat koruması sunar.",
+            applyUrl: "https://viennalife.com.tr/urunler/kredi-baglantili-urunler",
+            detailUrl: "https://viennalife.com.tr/urunler/kredi-baglantili-urunler",
+          },
+        ],
+      },
+    ],
   },
   {
     slug: "zurich-yasam-ve-emeklilik",
@@ -1997,6 +2137,115 @@ export const companies = [
     tags: ["Emeklilik", "Hayat"],
     logoSrc: "../assets/logos/zye-transparent.png",
     imageClass: "is-expanded-strong",
+    planSourceUrl: "https://www.zurichyasam.com.tr/html/index.html",
+    sharedPlanNote: "%20 devlet katkısı",
+    plans: [
+      {
+        title: "Emekliliğim Güvende Emeklilik Planı",
+        description:
+          "Her yaşa uygun yapıda düzenli katkı ile birikim yapmak isteyenlere yönelik temel BES planıdır.",
+        applyUrl:
+          "https://www.zurichyasam.com.tr/html/bireysel-emeklilik-sistemi/emekliligim-guvende-emeklilik-plani.html",
+        detailUrl:
+          "https://www.zurichyasam.com.tr/html/bireysel-emeklilik-sistemi/emekliligim-guvende-emeklilik-plani.html",
+      },
+      {
+        title: "Emekliliğim Güvende VIP Emeklilik Planı",
+        description:
+          "Başlangıç kapitali ile daha hızlı birikim oluşturmak isteyenlere yönelik VIP BES çözümüdür.",
+        middleNote: "En az başlangıç kapitali: 90.000 TL",
+        applyUrl:
+          "https://www.zurichyasam.com.tr/html/bireysel-emeklilik-sistemi/emekliligim-guvende-vip-emeklilik-plani.html",
+        detailUrl:
+          "https://www.zurichyasam.com.tr/html/bireysel-emeklilik-sistemi/emekliligim-guvende-vip-emeklilik-plani.html",
+      },
+    ],
+    extraSections: [
+      {
+        title: "Hayat Sigortaları",
+        sourceUrl:
+          "https://www.zurichyasam.com.tr/html/bireysel/hayat/uzun-sureli-hayat-sigortasi/index.html",
+        items: [
+          {
+            title: "Uzun Süreli Hayat Sigortası",
+            description:
+              "Poliçe süresi boyunca aynı teminatı sunan, TL ve dövize endeksli seçenekleri olan hayat ürünüdür.",
+            applyUrl:
+              "https://www.zurichyasam.com.tr/html/bireysel/hayat/uzun-sureli-hayat-sigortasi/index.html",
+            detailUrl:
+              "https://www.zurichyasam.com.tr/html/bireysel/hayat/uzun-sureli-hayat-sigortasi/index.html",
+          },
+          {
+            title: "Azalan Bakiyeli Uzun Süreli Hayat Sigortası",
+            description:
+              "Yıllık tazminat tutarı seçilerek uzun vadeli güvence sağlayan hayat sigortası türüdür.",
+            applyUrl:
+              "https://www.zurichyasam.com.tr/html/bireysel/hayat/azalan-bakiyeli-hayat-sigortasi/index.html",
+            detailUrl:
+              "https://www.zurichyasam.com.tr/html/bireysel/hayat/azalan-bakiyeli-hayat-sigortasi/index.html",
+          },
+        ],
+      },
+      {
+        title: "Sağlık Sigortaları",
+        sourceUrl:
+          "https://www.zurichyasam.com.tr/html/tamamlayici-saglik-sigortasi/destegin-bizden-tamamlayici-saglik-sigortasi.html",
+        items: [
+          {
+            title: "Desteğin Bizden Tamamlayıcı Sağlık Sigortası",
+            description:
+              "SGK anlaşmalı kurumlarda yatarak ve ayakta tedavi seçenekleriyle aile boyu sağlık güvencesi sunar.",
+            applyUrl:
+              "https://www.zurichyasam.com.tr/html/tamamlayici-saglik-sigortasi/destegin-bizden-tamamlayici-saglik-sigortasi.html",
+            detailUrl:
+              "https://www.zurichyasam.com.tr/html/tamamlayici-saglik-sigortasi/destegin-bizden-tamamlayici-saglik-sigortasi.html",
+          },
+          {
+            title: "Desteğin Bizden Ekstra Tamamlayıcı Sağlık Sigortası",
+            description:
+              "Geniş anlaşmalı kurum ağı ile ekstra kapsam arayanlar için TSS çözümüdür.",
+            applyUrl:
+              "https://www.zurichyasam.com.tr/html/tamamlayici-saglik-sigortasi/destegin-bizden-ekstra-tamamlayici-saglik-sigortasi.html",
+            detailUrl:
+              "https://www.zurichyasam.com.tr/html/tamamlayici-saglik-sigortasi/destegin-bizden-ekstra-tamamlayici-saglik-sigortasi.html",
+          },
+          {
+            title: "Desteğin Bizden VIP Tamamlayıcı Sağlık Sigortası",
+            description:
+              "Daha geniş kullanım beklentisi olanlar için VIP kapsamlı tamamlayıcı sağlık ürünüdür.",
+            applyUrl:
+              "https://www.zurichyasam.com.tr/html/tamamlayici-saglik-sigortasi/destegin-bizden-vip-tamamlayici-saglik-sigortasi.html",
+            detailUrl:
+              "https://www.zurichyasam.com.tr/html/tamamlayici-saglik-sigortasi/destegin-bizden-vip-tamamlayici-saglik-sigortasi.html",
+          },
+          {
+            title: "Desteğin Bizden Ekonomik Tamamlayıcı Sağlık Sigortası",
+            description:
+              "Daha uygun bütçe ile tamamlayıcı sağlık koruması almak isteyenlere yöneliktir.",
+            applyUrl:
+              "https://www.zurichyasam.com.tr/html/tamamlayici-saglik-sigortasi/destegin-bizden-ekonomik-tamamlayici-saglik-sigortasi.html",
+            detailUrl:
+              "https://www.zurichyasam.com.tr/html/tamamlayici-saglik-sigortasi/destegin-bizden-ekonomik-tamamlayici-saglik-sigortasi.html",
+          },
+        ],
+      },
+      {
+        title: "Ferdi Kaza Sigortaları",
+        sourceUrl:
+          "https://www.zurichyasam.com.tr/html/ferdi-kaza-sigortasi/ferdi-kaza-sigortasi.html",
+        items: [
+          {
+            title: "Ferdi Kaza Sigortası",
+            description:
+              "Kaza sonucu vefat, maluliyet ve tedavi masraflarına karşı 1 yıllık güvence sunar.",
+            applyUrl:
+              "https://www.zurichyasam.com.tr/html/ferdi-kaza-sigortasi/ferdi-kaza-sigortasi.html",
+            detailUrl:
+              "https://www.zurichyasam.com.tr/html/ferdi-kaza-sigortasi/ferdi-kaza-sigortasi.html",
+          },
+        ],
+      },
+    ],
   },
 ];
 
