@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BESRehber | Şirket Kartı</title>
+    <meta
+      name="description"
+      content="BESRehber şirket kartı sayfası."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="./#anasayfa" aria-label="BESRehber ana sayfa">
+          <img class="brand-mark" src="../assets/ok.png" alt="" aria-hidden="true" />
+          <span class="brand-text"><span class="brand-bes">BES</span><span class="brand-rehber">Rehber</span></span>
+        </a>
+
+        <nav class="site-nav" aria-label="Ana menü">
+          <a href="./#anasayfa">Anasayfa</a>
+          <a href="./#sirketler">Şirketler</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container page-content company-page-shell">
+      <section class="company-page-hero" aria-label="Şirket logosu alanı">
+        <div class="company-page-brand">
+          <a
+            class="company-page-logo-link"
+            id="company-logo-link"
+            href="./#anasayfa"
+            aria-label="Şirket resmi sitesini aç"
+          >
+            <img
+              class="company-page-logo"
+              id="company-logo"
+              src="../assets/logos/allianz.png"
+              alt="Şirket logosu"
+            />
+          </a>
+
+        </div>
+      </section>
+
+      <section class="company-page-card" aria-labelledby="company-card-title">
+        <div class="company-page-copy">
+          <h2 class="company-page-card-title" id="company-card-title">Emeklilik planları</h2>
+          <section
+            class="company-plan-section"
+            id="company-plan-section"
+            hidden
+          >
+            <div class="company-plan-grid" id="company-plan-grid"></div>
+          </section>
+        </div>
+      </section>
+
+      <div class="company-extra-sections" id="company-extra-sections"></div>
+    </main>
+
+    <script type="module" src="../detail.js"></script>
+  </body>
+</html>
