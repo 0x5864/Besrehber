@@ -1,0 +1,17 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+
+.idea/
+.vscode/
+
+node_modules/
+dist/
+build/
+.cache/
+
+*.log
+*.tmp
+*.temp
+
+Thumbs.db
