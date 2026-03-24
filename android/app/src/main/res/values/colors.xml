@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="bes_primary">#0D3310</color>
+  <color name="bes_primary_dark">#08230B</color>
+  <color name="bes_primary_soft">#E5EFE4</color>
+  <color name="bes_surface">#F2F3F5</color>
+  <color name="bes_splash_background">#FBFCFA</color>
+  <color name="bes_launcher_background">#0D3310</color>
+</resources>

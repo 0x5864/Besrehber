@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0d3310" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <title>BesRehber</title>
+    <meta
+      name="description"
+      content="BesRehber ürünler sayfası."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="../assets/hedef-green-fav.png" />
+    <link rel="shortcut icon" href="../assets/hedef-green-fav.png" />
+    <link rel="apple-touch-icon" href="../assets/pwa/icon-192.png" />
+    <link rel="manifest" href="../manifest.webmanifest" />
+    <link rel="stylesheet" href="../styles.css?v=20260324-2100" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="./#anasayfa" aria-label="BESRehber ana sayfa">
+          <img class="brand-mark" src="../assets/hedef-green.png" alt="" aria-hidden="true" />
+          <span class="brand-text"><span class="brand-text-accent">bes</span>rehber</span>
+        </a>
+
+        <div class="header-actions">
+          <nav class="header-nav" aria-label="Ana menü">
+            <div class="header-nav-item">
+              <a class="header-nav-trigger is-current" href="./urunler.html">Ürünler</a>
+            </div>
+            <div class="header-nav-item">
+              <a class="header-nav-trigger" href="./fonlar.html">Emeklilik Yatırım Fonları</a>
+            </div>
+            <div class="header-nav-item">
+              <a class="header-nav-trigger" href="./hesaplama.html">Hesaplama</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="container page-content company-page-shell">
+      <section class="calculation-hero">
+        <h1>Ürünler</h1>
+      </section>
+
+      <section class="company-page-card" aria-label="Ürünler tablosu">
+        <div class="company-page-copy">
+          <div class="fund-sort-tabs" id="product-section-tabs" role="tablist" aria-label="Ürün bölümleri"></div>
+
+          <div class="fund-list-head">
+            <p id="product-status" class="fund-status">Veriler yükleniyor...</p>
+          </div>
+
+          <div class="product-table" aria-live="polite">
+            <div class="product-table-head">
+              <span>Şirket</span>
+              <span>Ürün</span>
+              <span>Açıklama</span>
+              <span></span>
+            </div>
+            <div class="product-table-body" id="product-table-body"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script defer src="../pwa.js?v=20260323-1858"></script>
+    <script type="module" src="../urunler.js?v=20260324-2100"></script>
+  </body>
+</html>

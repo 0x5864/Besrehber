@@ -4,11 +4,19 @@
 
 .idea/
 .vscode/
+.gradle/
+android/.gradle/
+android/local.properties
+android/signing.properties
+*.jks
+*.keystore
 
 node_modules/
 dist/
 build/
 .cache/
+android/build/
+android/app/build/
 
 *.log
 *.tmp

@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BESRehber | Emeklilik Yatırım Fonları</title>
+    <meta name="theme-color" content="#0d3310" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <title>BesRehber</title>
     <meta
       name="description"
       content="TEFAS emeklilik yatırım fonlarını şirket ve fon türüne göre filtreleyin."
@@ -16,7 +18,9 @@
     />
     <link rel="icon" type="image/png" href="../assets/hedef-green-fav.png" />
     <link rel="shortcut icon" href="../assets/hedef-green-fav.png" />
-    <link rel="stylesheet" href="../styles.css?v=20260322-1712" />
+    <link rel="apple-touch-icon" href="../assets/pwa/icon-192.png" />
+    <link rel="manifest" href="../manifest.webmanifest" />
+    <link rel="stylesheet" href="../styles.css?v=20260324-2050" />
   </head>
   <body>
     <header class="site-header">
@@ -31,11 +35,19 @@
           <span class="brand-text"><span class="brand-text-accent">bes</span>rehber</span>
         </a>
 
-        <nav class="header-nav" aria-label="Ana menü">
-          <div class="header-nav-item">
-            <a class="header-nav-trigger" href="./fonlar.html">Emeklilik Yatırım Fonları</a>
-          </div>
-        </nav>
+        <div class="header-actions">
+          <nav class="header-nav" aria-label="Ana menü">
+            <div class="header-nav-item">
+              <a class="header-nav-trigger" href="./urunler.html">Ürünler</a>
+            </div>
+            <div class="header-nav-item">
+              <a class="header-nav-trigger is-current" href="./fonlar.html">Emeklilik Yatırım Fonları</a>
+            </div>
+            <div class="header-nav-item">
+              <a class="header-nav-trigger" href="./hesaplama.html">Hesaplama</a>
+            </div>
+          </nav>
+        </div>
       </div>
     </header>
 
@@ -50,9 +62,9 @@
       <section class="company-page-card fund-list-card" aria-label="Fon tablosu">
         <div class="company-page-copy">
           <div class="fund-sort-tabs" role="tablist" aria-label="Fon sıralama türü">
-            <button class="fund-sort-tab is-active" type="button" data-sort-mode="return">Getiri Bazlı</button>
-            <button class="fund-sort-tab" type="button" data-sort-mode="fee">Yönetim Ücreti Bazlı</button>
-            <button class="fund-sort-tab" type="button" data-sort-mode="size">Büyüklük Bazlı</button>
+            <button class="fund-sort-tab is-active" type="button" data-sort-mode="return">Getiriye Göre</button>
+            <button class="fund-sort-tab" type="button" data-sort-mode="fee">Yönetim Ücretine Göre</button>
+            <button class="fund-sort-tab" type="button" data-sort-mode="size">Büyüklüğe Göre</button>
           </div>
 
           <div class="fund-toolbar">
@@ -92,6 +104,7 @@
       </section>
     </main>
 
-    <script type="module" src="../fonlar.js?v=20260322-1718"></script>
+    <script defer src="../pwa.js?v=20260323-1858"></script>
+    <script type="module" src="../fonlar.js?v=20260323-1931"></script>
   </body>
 </html>

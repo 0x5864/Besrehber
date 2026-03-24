@@ -20,6 +20,7 @@ Bu proje, şirket logolarını ana sayfada bir dizin gibi gösterir. Her şirket
 - `main.js`: Ana sayfa işleyişi
 - `styles.css`: Tüm stil dosyası
 - `assets/`: Logo ve görsel dosyaları
+- `android/`: Native Android kabuğu
 
 ## Özellikler
 
@@ -43,6 +44,18 @@ Ardından şu adresi açın:
 
 ```text
 http://127.0.0.1:4174/web/#anasayfa
+
+## Android Uygulaması
+
+Native Android kabuğu `android/` klasöründedir.
+
+Web dosyalarını Android içine kopyalamak için şu komutu çalıştırın:
+
+```bash
+./scripts/sync-android-assets.sh
+```
+
+Daha sonra `android/` klasörünü Android Studio ile açın.
 ```
 
 ## Geliştirme Notu

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">BESRehber</string>
+  <string name="menu_refresh">Yenile</string>
+  <string name="menu_open_in_browser">Tarayıcıda Aç</string>
+  <string name="menu_share">Paylaş</string>
+  <string name="share_chooser_title">BESRehber paylaş</string>
+  <string name="share_text">%1$s\n%2$s</string>
+</resources>

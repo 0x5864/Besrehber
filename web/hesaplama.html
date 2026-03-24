@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0d3310" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <title>BesRehber</title>
+    <meta
+      name="description"
+      content="BesRehber hesaplama sayfası."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="../assets/hedef-green-fav.png" />
+    <link rel="shortcut icon" href="../assets/hedef-green-fav.png" />
+    <link rel="apple-touch-icon" href="../assets/pwa/icon-192.png" />
+    <link rel="manifest" href="../manifest.webmanifest" />
+    <link rel="stylesheet" href="../styles.css?v=20260324-2050" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="./#anasayfa" aria-label="BESRehber ana sayfa">
+          <img class="brand-mark" src="../assets/hedef-green.png" alt="" aria-hidden="true" />
+          <span class="brand-text"><span class="brand-text-accent">bes</span>rehber</span>
+        </a>
+
+        <div class="header-actions">
+          <nav class="header-nav" aria-label="Ana menü">
+            <div class="header-nav-item">
+              <a class="header-nav-trigger" href="./urunler.html">Ürünler</a>
+            </div>
+            <div class="header-nav-item">
+              <a class="header-nav-trigger" href="./fonlar.html">Emeklilik Yatırım Fonları</a>
+            </div>
+            <div class="header-nav-item">
+              <a class="header-nav-trigger is-current" href="./hesaplama.html">Hesaplama</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="container page-content calculation-page-shell">
+      <section class="calculation-hero">
+        <h1>Hesaplama Araçları</h1>
+      </section>
+
+      <section class="company-page-card" aria-label="Hesaplama araçları">
+        <div class="company-page-copy">
+          <div class="fund-sort-tabs calculation-tool-tabs" id="calculation-tool-tabs" role="tablist" aria-label="Hesaplama araçları">
+            <button class="fund-sort-tab is-active" type="button" data-calculation-tab="bes">BES Birikim Hesaplama</button>
+            <button class="fund-sort-tab" type="button" data-calculation-tab="fund-return">Fon Getiri Hesaplama</button>
+            <button class="fund-sort-tab" type="button" data-calculation-tab="state-support">Devlet Katkısı Hesaplama</button>
+          </div>
+
+          <div class="calculation-tool-panels">
+            <article class="calculation-card calculation-card-wide" data-calculation-panel="bes" aria-label="BES Birikim Hesaplama">
+              <div class="calculation-top-layout">
+                <form class="calculation-form" id="bes-form">
+                  <label class="fund-filter-field">
+                    <span>Yaşınız</span>
+                    <input id="bes-current-age" type="number" min="18" max="75" step="1" value="30" />
+                  </label>
+
+                  <label class="fund-filter-field">
+                    <span>Emekli olmayı planladığınız yaş</span>
+                    <input id="bes-retirement-age" type="number" min="56" max="75" step="1" value="56" />
+                  </label>
+
+                  <label class="fund-filter-field">
+                    <span>Ödeme sıklığınız</span>
+                    <select id="bes-frequency">
+                      <option value="1">Aylık</option>
+                      <option value="3">3 Aylık</option>
+                      <option value="6">6 Aylık</option>
+                      <option value="12">Yıllık</option>
+                    </select>
+                  </label>
+
+                  <label class="fund-filter-field">
+                    <span>Katkı payınız (TL)</span>
+                    <input id="bes-contribution" type="text" inputmode="numeric" value="3000" data-grouped-number />
+                  </label>
+
+                  <label class="fund-filter-field">
+                    <span>Katkı payı yıllık artış oranınız (%)</span>
+                    <select id="bes-increase-rate">
+                      <option value="0">0</option>
+                      <option value="0.5">0,5</option>
+                      <option value="1">1</option>
+                      <option value="1.5">1,5</option>
+                      <option value="2">2</option>
+                      <option value="2.5">2,5</option>
+                      <option value="3">3</option>
+                      <option value="3.5">3,5</option>
+                      <option value="4">4</option>
+                      <option value="4.5">4,5</option>
+                      <option value="5">5</option>
+                      <option value="5.5">5,5</option>
+                      <option value="6">6</option>
+                      <option value="6.5">6,5</option>
+                      <option value="7">7</option>
+                      <option value="7.5">7,5</option>
+                      <option value="8">8</option>
+                      <option value="8.5">8,5</option>
+                      <option value="9">9</option>
+                      <option value="9.5">9,5</option>
+                      <option value="10">10</option>
+                    </select>
+                  </label>
+
+                  <label class="fund-filter-field">
+                    <span>Varsa, başlangıç katkı payı tutarınız (TL)</span>
+                    <input id="bes-initial" type="text" inputmode="numeric" value="0" data-grouped-number />
+                  </label>
+
+                  <div class="calculation-form-actions">
+                    <button class="company-plan-action calculation-submit" type="submit">Hesapla</button>
+                  </div>
+                </form>
+
+                <div class="calculation-scenario-panel">
+                  <div class="calculation-result-card" id="bes-scenario-card">
+                    <div class="fund-sort-tabs calculation-scenario-tabs" id="bes-scenario-tabs" role="tablist" aria-label="BES senaryoları">
+                      <button class="fund-sort-tab is-active" type="button" data-bes-scenario="base">Temel senaryo</button>
+                      <button class="fund-sort-tab" type="button" data-bes-scenario="alternative">Alternatif senaryo</button>
+                    </div>
+
+                    <div class="calculation-result-grid" id="bes-scenario-grid"></div>
+                    <span class="calculation-summary-label">Emekliliğinizde oluşacak tahmini toplam tutar</span>
+                    <div class="calculation-summary">
+                      <div class="calculation-summary-box">
+                        <strong class="calculation-summary-total" id="bes-total-amount">0 TL</strong>
+                        <p class="calculation-validation" id="bes-validation"></p>
+                      </div>
+                    </div>
+                    <p class="calculation-summary-note">
+                      Bu hesaplama sonucu tahminidir. Birikim tutarı fon tercihlerine, getirilere ve zaman içindeki koşullara göre değişebilir.
+                    </p>
+                    <span class="calculation-summary-label">VARSAYIMLAR</span>
+                    <div class="calculation-result-note" id="bes-scenario-note"></div>
+                    <div class="calculation-assumptions" aria-label="Hesaplama varsayımları">
+                      <p>- Katkı payınızın emeklilik dönemine kadar sabit kaldığı varsayılır.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </article>
+
+            <article class="calculation-card calculation-card-wide" data-calculation-panel="fund-return" hidden>
+              <div class="calculation-top-layout">
+                <form class="calculation-form" id="fund-return-form">
+                  <label class="fund-filter-field">
+                    <span>Başlangıç yatırımınız (TL)</span>
+                    <input id="fund-return-initial" type="text" inputmode="numeric" value="100000" data-grouped-number />
+                  </label>
+
+                  <label class="fund-filter-field">
+                    <span>Aylık ek yatırımınız (TL)</span>
+                    <input id="fund-return-monthly" type="text" inputmode="numeric" value="3000" data-grouped-number />
+                  </label>
+
+                  <label class="fund-filter-field">
+                    <span>Yıllık net getiri oranı (%)</span>
+                    <input id="fund-return-rate" type="number" min="0" max="100" step="0.1" value="18" />
+                  </label>
+
+                  <label class="fund-filter-field">
+                    <span>Yatırım süresi (yıl)</span>
+                    <input id="fund-return-years" type="number" min="1" max="50" step="1" value="10" />
+                  </label>
+
+                  <div class="calculation-form-actions">
+                    <button class="company-plan-action calculation-submit" type="submit">Hesapla</button>
+                  </div>
+                </form>
+
+                <div class="calculation-scenario-panel">
+                  <div class="calculation-result-card">
+                    <div class="calculation-result-grid" id="fund-return-grid"></div>
+                    <span class="calculation-summary-label">Tahmini toplam fon değeri</span>
+                    <div class="calculation-summary">
+                      <div class="calculation-summary-box">
+                        <strong class="calculation-summary-total" id="fund-return-total">0 TL</strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="calculation-card calculation-card-wide" data-calculation-panel="state-support" hidden>
+              <div class="calculation-top-layout">
+                <form class="calculation-form" id="state-support-form">
+                  <label class="fund-filter-field">
+                    <span>Ödeme sıklığınız</span>
+                    <select id="state-support-frequency">
+                      <option value="1">Aylık</option>
+                      <option value="3">3 Aylık</option>
+                      <option value="6">6 Aylık</option>
+                      <option value="12">Yıllık</option>
+                    </select>
+                  </label>
+
+                  <label class="fund-filter-field">
+                    <span>Katkı payınız (TL)</span>
+                    <input id="state-support-contribution" type="text" inputmode="numeric" value="3000" data-grouped-number />
+                  </label>
+
+                  <label class="fund-filter-field">
+                    <span>Sistemde kalınacak süre (yıl)</span>
+                    <input id="state-support-years" type="number" min="1" max="50" step="1" value="10" />
+                  </label>
+
+                  <label class="fund-filter-field">
+                    <span>Başlangıç toplu katkınız (TL)</span>
+                    <input id="state-support-initial" type="text" inputmode="numeric" value="0" data-grouped-number />
+                  </label>
+
+                  <div class="calculation-form-actions">
+                    <button class="company-plan-action calculation-submit" type="submit">Hesapla</button>
+                  </div>
+                </form>
+
+                <div class="calculation-scenario-panel">
+                  <div class="calculation-result-card">
+                    <div class="calculation-result-grid" id="state-support-grid"></div>
+                    <span class="calculation-summary-label">Toplam birikim ve devlet katkısı</span>
+                    <div class="calculation-summary">
+                      <div class="calculation-summary-box">
+                        <strong class="calculation-summary-total" id="state-support-total">0 TL</strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script defer src="../pwa.js?v=20260323-1858"></script>
+    <script type="module" src="../hesaplama.js?v=20260324-2035"></script>
+  </body>
+</html>

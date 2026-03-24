@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1532" height="512" viewBox="0 0 1532 512" role="img" aria-labelledby="title desc">
+  <title id="title">Katilim Emeklilik logosu</title>
+  <desc id="desc">Gonderilen gorsele gore mavi amblem ve Katilim Emeklilik yazi logosu.</desc>
+  <rect width="1532" height="512" fill="#ffffff"/>
+  <defs>
+    <linearGradient id="katilimMarkBlue" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#0057b8"/>
+      <stop offset="100%" stop-color="#1397db"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(56 78)">
+    <path
+      d="M250 30c48 0 79 34 79 82 0 35-33 90-79 143-46-53-79-108-79-143 0-48 31-82 79-82z"
+      fill="url(#katilimMarkBlue)"
+    />
+    <path
+      d="M250 89c19 0 32 14 32 34 0 19-15 48-32 74-17-26-32-55-32-74 0-20 13-34 32-34z"
+      fill="#ffffff"
+    />
+    <path
+      d="M26 248c63-44 123-87 181-131 23 12 45 30 66 53-58 24-110 50-161 78H26z"
+      fill="url(#katilimMarkBlue)"
+    />
+    <path
+      d="M474 248c-63-44-123-87-181-131-23 12-45 30-66 53 58 24 110 50 161 78h86z"
+      fill="url(#katilimMarkBlue)"
+    />
+    <path
+      d="M34 356c69-60 143-88 216-88 73 0 147 28 216 88H287l-37-40-37 40H34z"
+      fill="url(#katilimMarkBlue)"
+    />
+  </g>
+
+  <g fill="#124aa8" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    <text x="620" y="146" font-size="155">Katilim</text>
+    <text x="620" y="352" font-size="155">Emeklilik</text>
+  </g>
+</svg>
