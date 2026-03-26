@@ -44,6 +44,15 @@ Ardından şu adresi açın:
 
 ```text
 http://127.0.0.1:4174/web/#anasayfa
+```
+
+## Güncel Sayfalar
+
+- `web/#anasayfa`: Ana sayfa şirket dizini
+- `web/urunler.html`: Ürünler tablosu
+- `web/emeklilik-yatirim-fonlari.html`: Yatırım fonları sayfası
+- `web/hesaplama.html`: Hesaplama araçları
+- `web/sirket.html?slug=...`: Şirket detay sayfası
 
 ## Android Uygulaması
 
@@ -56,7 +65,6 @@ Web dosyalarını Android içine kopyalamak için şu komutu çalıştırın:
 ```
 
 Daha sonra `android/` klasörünü Android Studio ile açın.
-```
 
 ## Geliştirme Notu
 
