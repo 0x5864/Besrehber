@@ -568,14 +568,7 @@ function updateFundList() {
 
   fundTableHead.innerHTML = renderTableHead();
 
-  const modeLabel =
-    currentSortMode === "fee"
-      ? "Yönetim Ücreti Bazlı"
-      : currentSortMode === "size"
-        ? "Büyüklük Bazlı"
-        : "Getiri Bazlı";
-
-  fundStatus.textContent = `${visibleFunds.length} fon listeleniyor. ${modeLabel} görünümü açık.`;
+  fundStatus.textContent = `${visibleFunds.length} fon listeleniyor.`;
 
   if (visibleFunds.length === 0) {
     fundGrid.innerHTML = `

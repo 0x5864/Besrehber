@@ -1,20 +1,10 @@
-const APP_VERSION = "20260323-header-cache-fix-1";
+const APP_VERSION = "20260326-cache-reset-1";
 const STATIC_CACHE = `besrehber-static-${APP_VERSION}`;
 const RUNTIME_CACHE = `besrehber-runtime-${APP_VERSION}`;
 const FONT_HOSTS = new Set(["fonts.googleapis.com", "fonts.gstatic.com"]);
 const APP_SHELL_URL = new URL("./web/index.html", self.registration.scope).href;
 const PRECACHE_URLS = [
-  "./index.html",
   "./manifest.webmanifest",
-  "./styles.css",
-  "./main.js",
-  "./detail.js",
-  "./fonlar.js",
-  "./pwa.js",
-  "./companies.js",
-  "./web/index.html",
-  "./web/sirket.html",
-  "./web/fonlar.html",
   "./assets/hedef-green-fav.png",
   "./assets/hedef-green.png",
   "./assets/pwa/icon-192.png",
@@ -97,16 +87,28 @@ async function handleNavigationRequest(request) {
  * @returns {Promise<Response>}
  */
 async function handleAssetRequest(request) {
+  const requestUrl = new URL(request.url);
   const cachedResponse = await caches.match(request);
+  const isSameOrigin = requestUrl.origin === self.location.origin;
+  const isRealtimeAsset =
+    isSameOrigin &&
+    (requestUrl.pathname.endsWith(".css") ||
+      requestUrl.pathname.endsWith(".js") ||
+      requestUrl.pathname.endsWith(".html"));
+
+  if (isRealtimeAsset) {
+    try {
+      const response = await fetch(request);
+      await storeInCache(STATIC_CACHE, request, response);
+      return response;
+    } catch (error) {
+      return cachedResponse || Response.error();
+    }
+  }
+
   const fetchPromise = fetch(request)
     .then(async (response) => {
-      await storeInCache(
-        new URL(request.url).origin === self.location.origin
-          ? STATIC_CACHE
-          : RUNTIME_CACHE,
-        request,
-        response,
-      );
+      await storeInCache(isSameOrigin ? STATIC_CACHE : RUNTIME_CACHE, request, response);
       return response;
     })
     .catch(() => cachedResponse);

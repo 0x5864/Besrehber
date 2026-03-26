@@ -1,6 +1,7 @@
 const INSTALL_BUTTON_SELECTOR = "[data-install-app]";
 const STANDALONE_DISPLAY_MODE = "(display-mode: standalone)";
-const SW_VERSION = "20260323-header-cache-fix-1";
+const SW_VERSION = "20260326-cache-reset-1";
+const LOCAL_HOSTS = new Set(["127.0.0.1", "localhost"]);
 
 /** @type {BeforeInstallPromptEvent | null} */
 let deferredInstallPrompt = null;
@@ -28,6 +29,14 @@ function getInstallButtons() {
   return Array.from(document.querySelectorAll(INSTALL_BUTTON_SELECTOR)).filter(
     (button) => button instanceof HTMLButtonElement,
   );
+}
+
+/**
+ * Sayfa yerel gelistirme sunucusunda mi calisiyor kontrol eder.
+ * @returns {boolean}
+ */
+function isLocalPreview() {
+  return LOCAL_HOSTS.has(window.location.hostname);
 }
 
 /**
@@ -59,6 +68,26 @@ function syncInstallButtons() {
  */
 async function registerServiceWorker() {
   if (!("serviceWorker" in navigator)) {
+    return;
+  }
+
+  if (isLocalPreview()) {
+    try {
+      const registrations = await navigator.serviceWorker.getRegistrations();
+      await Promise.all(registrations.map((registration) => registration.unregister()));
+
+      if ("caches" in window) {
+        const cacheKeys = await caches.keys();
+        await Promise.all(
+          cacheKeys
+            .filter((cacheKey) => cacheKey.startsWith("besrehber-"))
+            .map((cacheKey) => caches.delete(cacheKey)),
+        );
+      }
+    } catch (error) {
+      console.error("Yerel onizleme cache temizligi basarisiz oldu.", error);
+    }
+
     return;
   }
 

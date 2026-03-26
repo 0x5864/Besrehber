@@ -8,7 +8,7 @@
     <title>BesRehber</title>
     <meta
       name="description"
-      content="BESRehber şirket kartı sayfası."
+      content="TEFAS emeklilik yatırım fonlarını şirket ve fon türüne göre filtreleyin."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,6 +20,11 @@
     <link rel="shortcut icon" href="../assets/hedef-green-fav.png" />
     <link rel="apple-touch-icon" href="../assets/pwa/icon-192.png" />
     <link rel="manifest" href="../manifest.webmanifest" />
+    <script>
+      if (window.location.search !== "?v=20260326-2128") {
+        window.location.replace(`./emeklilik-yatirim-fonlari.html?v=20260326-2128${window.location.hash}`);
+      }
+    </script>
     <link rel="stylesheet" href="../styles.css?v=20260326-2058" />
     <script>
       (function () {
@@ -70,7 +75,12 @@
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="./#anasayfa" aria-label="BESRehber ana sayfa">
-          <img class="brand-mark" src="../assets/hedef-green.png" alt="" aria-hidden="true" />
+          <img
+            class="brand-mark"
+            src="../assets/hedef-green.png"
+            alt=""
+            aria-hidden="true"
+          />
           <span class="brand-text"><span class="brand-text-accent">bes</span>rehber</span>
         </a>
 
@@ -80,7 +90,7 @@
               <a class="header-nav-trigger" href="./urunler.html">Ürünler</a>
             </div>
             <div class="header-nav-item">
-              <a class="header-nav-trigger" href="./emeklilik-yatirim-fonlari.html?v=20260326-2128">Yatırım Fonları</a>
+              <a class="header-nav-trigger is-current" href="./emeklilik-yatirim-fonlari.html?v=20260326-2128">Yatırım Fonları</a>
             </div>
             <div class="header-nav-item">
               <a class="header-nav-trigger" href="./hesaplama.html">Hesaplama</a>
@@ -90,49 +100,59 @@
       </div>
     </header>
 
-    <main class="container page-content company-page-shell">
-      <section class="company-page-hero" aria-label="Şirket logosu alanı">
-        <div class="company-page-brand">
-          <a
-            class="company-page-logo-link"
-            id="company-logo-link"
-            href="./#anasayfa"
-            aria-label="Şirket resmi sitesini aç"
-          >
-            <img
-              class="company-page-logo"
-              id="company-logo"
-              src="../assets/logos/allianz.png"
-              alt="Şirket logosu"
-            />
-          </a>
-
+    <main class="container page-content fund-page-shell">
+      <section class="fund-page-hero">
+        <div class="fund-page-heading">
+          <h1>Emeklilik Yatırım Fonları</h1>
         </div>
+
       </section>
 
-      <section class="company-page-card" aria-labelledby="company-card-title">
+      <section class="company-page-card fund-list-card" aria-label="Fon tablosu">
         <div class="company-page-copy">
-          <div
-            class="fund-sort-tabs company-section-tabs"
-            id="company-section-tabs"
-            role="tablist"
-            aria-label="Şirket ürün bölümleri"
-            hidden
-          ></div>
-          <h2 class="company-page-card-title" id="company-card-title">Emeklilik planları</h2>
-          <section
-            class="company-plan-section"
-            id="company-plan-section"
-            hidden
-          >
-            <div class="company-plan-grid" id="company-plan-grid"></div>
-          </section>
+          <div class="fund-sort-tabs" role="tablist" aria-label="Fon sıralama türü">
+            <button class="fund-sort-tab is-active" type="button" data-sort-mode="return">Getiriye Göre</button>
+            <button class="fund-sort-tab" type="button" data-sort-mode="fee">Yönetim Ücretine Göre</button>
+            <button class="fund-sort-tab" type="button" data-sort-mode="size">Büyüklüğe Göre</button>
+          </div>
+
+          <div class="fund-toolbar">
+            <label class="fund-filter-field">
+              <span>Şirket</span>
+              <select id="founder-filter">
+                <option value="">Tüm şirketler</option>
+              </select>
+            </label>
+
+            <label class="fund-filter-field">
+              <span>Fon Türü</span>
+              <select id="type-filter">
+                <option value="">Tüm fon türleri</option>
+              </select>
+            </label>
+
+            <label class="fund-filter-field fund-filter-search">
+              <span>Fon Ara</span>
+              <input
+                id="fund-search"
+                type="search"
+                placeholder="Fon kodu veya fon adı yazın"
+              />
+            </label>
+          </div>
+
+          <div class="fund-list-head">
+            <p id="fund-status" class="fund-status">Veriler yükleniyor...</p>
+          </div>
+
+          <div class="fund-table" aria-live="polite">
+            <div class="fund-table-head" id="fund-table-head"></div>
+            <div class="fund-table-body" id="fund-grid"></div>
+          </div>
         </div>
       </section>
-
-      <div class="company-extra-sections" id="company-extra-sections" hidden></div>
     </main>
 
-    <script type="module" src="../detail.js?v=20260326-2058"></script>
+    <script type="module" src="../fonlar.js?v=20260326-2058"></script>
   </body>
 </html>

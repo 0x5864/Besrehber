@@ -2,106 +2,12 @@
 <html lang="tr">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0; url=./emeklilik-yatirim-fonlari.html?v=20260326-2128" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0d3310" />
-    <meta name="mobile-web-app-capable" content="yes" />
     <title>BesRehber</title>
-    <meta
-      name="description"
-      content="TEFAS emeklilik yatırım fonlarını şirket ve fon türüne göre filtreleyin."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/png" href="../assets/hedef-green-fav.png" />
-    <link rel="shortcut icon" href="../assets/hedef-green-fav.png" />
-    <link rel="apple-touch-icon" href="../assets/pwa/icon-192.png" />
-    <link rel="manifest" href="../manifest.webmanifest" />
-    <link rel="stylesheet" href="../styles.css?v=20260322-1712" />
+    <script>
+      window.location.replace(`./emeklilik-yatirim-fonlari.html?v=20260326-2128${window.location.hash}`);
+    </script>
   </head>
-  <body>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="./#anasayfa" aria-label="BESRehber ana sayfa">
-          <img
-            class="brand-mark"
-            src="../assets/hedef-green.png"
-            alt=""
-            aria-hidden="true"
-          />
-          <span class="brand-text"><span class="brand-text-accent">bes</span>rehber</span>
-        </a>
-
-        <div class="header-actions">
-          <nav class="header-nav" aria-label="Ana menü">
-            <div class="header-nav-item">
-              <a class="header-nav-trigger" href="./fonlar.html">Emeklilik Yatırım Fonları</a>
-            </div>
-          </nav>
-          <button class="header-install-button" type="button" data-install-app hidden>
-            Uygulamayı Yükle
-          </button>
-        </div>
-      </div>
-    </header>
-
-    <main class="container page-content fund-page-shell">
-      <section class="fund-page-hero">
-        <div class="fund-page-heading">
-          <h1>Emeklilik Yatırım Fonları</h1>
-        </div>
-
-      </section>
-
-      <section class="company-page-card fund-list-card" aria-label="Fon tablosu">
-        <div class="company-page-copy">
-          <div class="fund-sort-tabs" role="tablist" aria-label="Fon sıralama türü">
-            <button class="fund-sort-tab is-active" type="button" data-sort-mode="return">Getiri Bazlı</button>
-            <button class="fund-sort-tab" type="button" data-sort-mode="fee">Yönetim Ücreti Bazlı</button>
-            <button class="fund-sort-tab" type="button" data-sort-mode="size">Büyüklük Bazlı</button>
-          </div>
-
-          <div class="fund-toolbar">
-            <label class="fund-filter-field">
-              <span>Şirket</span>
-              <select id="founder-filter">
-                <option value="">Tüm şirketler</option>
-              </select>
-            </label>
-
-            <label class="fund-filter-field">
-              <span>Fon Türü</span>
-              <select id="type-filter">
-                <option value="">Tüm fon türleri</option>
-              </select>
-            </label>
-
-            <label class="fund-filter-field fund-filter-search">
-              <span>Fon Ara</span>
-              <input
-                id="fund-search"
-                type="search"
-                placeholder="Fon kodu veya fon adı yazın"
-              />
-            </label>
-          </div>
-
-          <div class="fund-list-head">
-            <p id="fund-status" class="fund-status">Veriler yükleniyor...</p>
-          </div>
-
-          <div class="fund-table" aria-live="polite">
-            <div class="fund-table-head" id="fund-table-head"></div>
-            <div class="fund-table-body" id="fund-grid"></div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <script defer src="../pwa.js"></script>
-    <script type="module" src="../fonlar.js?v=20260322-1718"></script>
-  </body>
+  <body></body>
 </html>
